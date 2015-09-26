@@ -7,7 +7,7 @@ import java.net.URL;
 import auto.parcel.AutoParcel;
 
 @AutoParcel
-abstract class World implements Parcelable{
+public abstract class World implements Parcelable{
     abstract String id();
     abstract String language();
     abstract URL url();

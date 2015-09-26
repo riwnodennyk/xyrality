@@ -22,10 +22,15 @@ android {
         }
     }
 }
+android {
+    packagingOptions {
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/NOTICE'
+    }
+}
 
 dependencies {
     apt 'com.github.frankiesardo:auto-parcel-processor:0.3'
-
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.android.support:appcompat-v7:23.0.1'
     compile 'com.squareup.retrofit:retrofit:2.0.0-beta1'
@@ -33,11 +38,9 @@ dependencies {
     compile 'com.android.support:recyclerview-v7:23.0.1'
     compile 'com.google.android.gms:play-services:7.5.0'
     compile 'com.github.frankiesardo:auto-parcel:0.3'
-    compile 'com.squareup.moshi:moshi:0.9.0'
-    compile 'com.squareup.retrofit:converter-moshi:2.0.0-beta1'
     compile 'com.android.support:support-annotations:23.0.1'
-
     androidTestCompile 'com.android.support.test.espresso:espresso-core:2.2.1'
     androidTestCompile 'com.android.support.test:runner:0.3'
-    androidTestCompile "junit:junit:4.11"
+    androidTestCompile 'junit:junit:4.11'
+    compile 'com.squareup.retrofit:converter-jackson:2.0.0-beta1'
 }
