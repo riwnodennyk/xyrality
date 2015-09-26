@@ -3,7 +3,6 @@
     package="ua.kulku.xyrality"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <!-- To access Google+ APIs: -->
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.READ_PROFILE"/>
     <uses-permission android:name="android.permission.READ_CONTACTS"/>
@@ -16,7 +15,6 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".ui.LoginActivity"
-            android:label="@string/title_activity_login"
             android:windowSoftInputMode="adjustResize|stateHidden">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -25,9 +23,7 @@
             </intent-filter>
         </activity>
 
-        <activity
-            android:name=".ui.WorldsListActivity"
-            android:label="@string/app_name">
+        <activity android:name=".ui.WorldsListActivity">
         </activity>
     </application>
 
