@@ -9,7 +9,6 @@ import org.junit.runners.JUnit4;
 
 import ua.kulku.xyrality.ui.LoginActivity;
 
-import static android.support.test.espresso.Espresso.onData;
 import static android.support.test.espresso.Espresso.onView;
 import static android.support.test.espresso.action.ViewActions.click;
 import static android.support.test.espresso.action.ViewActions.typeText;
@@ -28,7 +27,6 @@ public class LoginTest {
         onView(withId(R.id.email)).perform(typeText("android.test@xyrality.com"));
         onView(withId(R.id.password)).perform(typeText("password"));
         onView(withId(R.id.email_sign_in_button)).perform(click());
-
-        onData(withText("Deutsch 15 (empfohlen)")).check(matches(isDisplayed()));
+        onView(withText("Australia 7 (recommended)")).check(matches(isDisplayed())); //todo mock the response
     }
 }
